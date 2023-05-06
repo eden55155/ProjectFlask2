@@ -11,4 +11,16 @@
       </form>
    </body>
    </html>
-   
+   <h2>Create Jenkins Job and User</h2>
+<form method="POST" action="/create-job">
+    <label for="job_name">Job Name:</label>
+    <input type="text" name="job_name" id="job_name" required>
+    <br>
+    <label for="user_name">User Name:</label>
+    <input type="text" name="user_name" id="user_name" required>
+    <br>
+    <label for="user_token">User Token:</label>
+    <input type="password" name="user_token" id="user_token" required>
+    <br>
+    <button type="submit">Create Job and User</button>
+</form>

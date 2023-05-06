@@ -1,10 +1,13 @@
-   FROM python:latest
+FROM python:latest
 
-   WORKDIR /app
+WORKDIR /app
+COPY requirements.txtf
+RUN pip install -r requirements.txt
 
-   COPY requirements.txt requirements.txt
-   RUN pip install -r requirements.txt
+COPY / .
 
-   COPY / .
+EXPOSE 8080
 
-   CMD [ "python", "app.py" ]
+CMD ["python", "app.py"]
+
+
